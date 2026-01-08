@@ -15,4 +15,8 @@ class Message extends Model
         'role',
         'content',
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

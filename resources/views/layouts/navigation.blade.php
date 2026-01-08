@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-black border-b border-gray-900">
+<nav x-data="{ open: false }" class="backdrop-blur-3xl border-none">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
 
@@ -119,7 +119,7 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button
-                                class="inline-flex items-center px-3 py-2 text-sm font-medium border-none text-gray-100 bg-black hover:text-slate-400">
+                                class="inline-flex items-center px-3 py-2 text-sm font-medium border-none text-gray-100 bg-transparent hover:text-slate-400">
                                 {{ Auth::user()->name }}
                                 <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -129,7 +129,7 @@
                         </x-slot>
 
                         <x-slot name="content">
-                            <div class="block px-4 py-2 text-xs bg-black text-gray-400">
+                            <div class="block px-4 py-2 text-xs backdrop-blur-md text-slate-300">
                                 {{ __('Account') }}
                             </div>
 
@@ -215,12 +215,6 @@
                     class="h-6 w-6 hover:scale-110 transition">
                 {{ __('Message') }}
             </x-responsive-nav-link>
-
-
-
-
-
-
 
         </div>
         @endauth

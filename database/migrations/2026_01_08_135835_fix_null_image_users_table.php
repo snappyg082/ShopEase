@@ -14,12 +14,12 @@ return new class extends Migration
         $users = DB::table('users')->whereNull('image')->get();
 
         foreach ($users as $user) {
-            // Check if the .jfif image exists
-            $imageJfif = 'user' . $user->id . '.jfif';
+            // Check if the .jpg image exists
+            $imageJpg = 'user' . $user->id . '.jpg';
             $imagePng  = 'user' . $user->id . '.png';
 
-            if (file_exists(public_path('img/' . $imageJfif))) {
-                $imageToUse = $imageJfif;
+            if (file_exists(public_path('img/' . $imageJpg))) {
+                $imageToUse = $imageJpg;
             } elseif (file_exists(public_path('img/' . $imagePng))) {
                 $imageToUse = $imagePng;
             } else {

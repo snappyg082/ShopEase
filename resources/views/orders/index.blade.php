@@ -20,7 +20,7 @@
 
         {{-- Page Header --}}
         <div class="flex items-center justify-between">
-            <h1 class="text-2xl font-bold  text-gray-900 ">
+            <h1 class="text-2xl font-bold  text-gray-100 ">
                 📦 Your Orders
             </h1>
         </div>
@@ -28,7 +28,7 @@
         {{-- Empty State --}}
         @if($orders->isEmpty())
         <div class="bg-transparent shadow rounded-xl p-10 text-center">
-            <p class="text-gray-600 text-lg">
+            <p class="text-gray-300 text-lg">
                 You haven't placed any orders yet.
             </p>
             <a href="{{ route('shop.products') }}"
@@ -45,19 +45,19 @@
                 {{-- Table Header --}}
                 <thead class="backdrop-blur-3xl">
                     <tr>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-300">
                             Order ID
                         </th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-300">
                             Total Price
                         </th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-300">
                             Status
                         </th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-300">
                             Placed On
                         </th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-300">
                             Actions
                         </th>
                     </tr>
@@ -66,9 +66,9 @@
                 {{-- Table Body --}}
                 <tbody class="divide-y divide-gray-200">
                     @foreach($orders as $order)
-                    <tr class="hover:bg-slate-400 transition">
+                    <tr class="hover:bg-blue-950 transition">
 
-                        <td class="px-6 py-4 font-medium text-gray-900">
+                        <td class="px-6 py-4 font-medium text-gray-500">
                             #{{ $order->id }}
                         </td>
 
@@ -85,7 +85,7 @@
                             </span>
                         </td>
 
-                        <td class="px-6 py-4 text-gray-600">
+                        <td class="px-6 py-4 text-gray-400">
                             {{ $order->created_at->format('M d, Y · h:i A') }}
                         </td>
 

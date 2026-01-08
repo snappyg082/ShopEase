@@ -15,20 +15,20 @@
 
 @section('content')
 <div class="min-h-screen bg-transparent flex items-center justify-center py-3 mb-10 scroll-m-0">
-    <div class="w-full max-w-md bg-white rounded-2xl shadow-lg overflow-hidden">
-        <div class="bg-indigo-600 px-6 py-4 text-black">
-            <h2 class="text-lg font-semibold text-center py-3 text-white">ChatBot</h2>
+    <div class="w-full max-w-md bg-transparent rounded-2xl shadow-lg overflow-hidden">
+        <div class="bg-transparent px-6 py-4 text-white">
+            <h2 class="border rounded-xl text-lg bg-gradient-to-t from-slate-500 to-blue-800 font-semibold text-center py-3 text-white">Chat with Chatbot-AI!</h2>
 
             <!-- Chat Box -->
-            <div id="chat-box" class="border rounded-lg p-4 h-96 overflow-y-auto bg-gray-50 mb-4 space-y-2">
+            <div id="chat-box" class=" p-4 h-96 overflow-y-auto bg-transparent mb-4 space-y-2">
             </div>
 
             <!-- Input -->
             <div class="flex gap-2">
                 <input type="text" id="chat-input" placeholder="Type a message..."
-                    class="flex-1 border border-black rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                    class="flex-1 bg-gradient-to-l from-slate-600 to-blue-800 border border-none rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
                 <button id="send-btn"
-                    class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed">
+                    class="bg-indigo-700 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
                     Send
                 </button>
             </div>

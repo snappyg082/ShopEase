@@ -16,7 +16,7 @@
 
     {{-- Page Header --}}
     <div class="flex items-center justify-between">
-        <h1 class="text-2xl font-bold text-gray-900">
+        <h1 class="text-2xl font-bold text-gray-400">
             {{ ucfirst($type) }}
         </h1>
         <div class="space-x-6 backdrop-blur-lg rounded-lg p-2 ">
@@ -40,19 +40,19 @@
         <table class="min-w-full divide-y divide-gray-200">
             <thead class="backdrop-blur-3xl">
                 <tr>
-                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-900">Subject</th>
-                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-900">Date</th>
-                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-900">Status</th>
-                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-900">Actions</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-200">Subject</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-200">Date</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-200">Status</th>
+                    <th class="px-6 py-4 text-left text-sm font-semibold text-slate-200">Actions</th>
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
                 @foreach($sms as $s)
-                <tr class="hover:bg-slate-400 transition">
-                    <td class="px-6 py-4 font-medium text-gray-900">
+                <tr class="hover:bg-blue-950 transition">
+                    <td class="px-6 py-4 font-medium text-gray-100">
                         {{ $s->subject }}
                     </td>
-                    <td class="px-6 py-4 text-gray-600">
+                    <td class="px-6 py-4 text-gray-400">
                         {{ $s->created_at->format('Y M, d · h:i A') }}
                     </td>
                     <td class="px-6 py-4">
@@ -64,7 +64,7 @@
                     </td>
                     <td class="px-6 py-4">
                         <a href="{{ route('sms.show', $s->id) }}" class="inline-flex items-center gap-2 px-3 py-1 text-sm font-semibold
-                                   text-indigo-600 hover:text-indigo-800">
+                                   text-indigo-500 hover:text-indigo-800">
                             View
                         </a>
                     </td>

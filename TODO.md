@@ -1,0 +1,5 @@
+- [ ] Fix products grid layout: Wrap each product's image and details in a single container div to group them together
+- [ ] Change 'grid-cols-auto' to proper Tailwind responsive classes like 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+- [ ] Display actual SMS search results (subject, body) instead of just a link
+- [ ] Display actual Messages search results (content) instead of just a link
+- [ ] Change @elseif to separate @if blocks for SMS and Messages so both can show if they have results

@@ -29,7 +29,7 @@
                 <div class="
                     max-w-xs px-4 py-3 rounded-2xl text-sm
                     {{ $sms->read
-                        ? 'bg-gray-200 text-gray-800 rounded-tl-none'
+                        ? 'bg-blue-200 text-gray-800 rounded-tl-none'
                         : 'bg-indigo-600 text-white rounded-tr-none'
                     }}">
                     {{ $sms->body }}
@@ -53,7 +53,7 @@
         <!-- Footer -->
         <div class="bg-gray-50 px-6 py-4 flex justify-between items-center">
             <a href="{{ route('sms.index') }}"
-                class="text-sm text-gray-500 hover:text-gray-700">
+                class="text-sm text-gray-500 hover:text-blue-700">
                 ← Back
             </a>
 

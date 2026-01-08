@@ -24,10 +24,19 @@
 
     <!-- FULL PAGE BACKGROUND -->
     <div class="min-h-screen bg-cover bg-center bg-no-repeat"
-        style="background-image: url('{{ asset('images/mainBackground.png') }}');">
+        style="background-image: url('{{ asset('images/newmain.png') }}');">
+
+
 
 
         @include('layouts.navigation')
+
+        @guest
+        {{-- Content for logged-out users --}}
+        <div class="min-h-screen bg-cover bg-center bg-no-repeat "
+            style="background-image: url('{{ asset('images/newLogin.png') }}');">
+        </div>
+        @else
 
         <!-- Page Heading -->
         @if (isset($header))
@@ -62,6 +71,7 @@
     @stack('modals')
 
     @livewireScripts
+    @endguest
 </body>
 
 </html>

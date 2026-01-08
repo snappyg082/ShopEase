@@ -6,29 +6,29 @@
 
         {{-- Header --}}
         <div class="flex items-center justify-between">
-            <h1 class="text-2xl font-bold text-gray-900 tracking-wide">
+            <h1 class="text-2xl font-bold text-slate-400 tracking-wide">
                 Tracking no.{{ $order->id }}-({{ $order->user->name }})
             </h1>
 
             <a href="{{ route('orders.index') }}"
-                class="text-black hover:text-indigo-600">
+                class="text-black">
                 ← Back to Orders
             </a>
         </div>
 
         {{-- Order Summary --}}
         <div class="backdrop-blur-3xl shadow rounded-xl p-6">
-            <p class="text-red-700"><strong class="text-red-600">Status:</strong> {{ ucfirst($order->status) }}</p>
+            <p class="text-red-600"><strong class="text-red-700">Status:</strong> {{ ucfirst($order->status) }}</p>
             <p class="text-green-700"><strong class="text-green-600">Total:</strong> ${{ number_format($order->total_price, 2) }}</p>
-            <p class="text-slate-800"><strong class="text-blue-800">Placed:</strong> {{ $order->created_at->format('M d, Y · h:i A') }}</p>
-            <p class="text-slate-800"><strong class="text-black">Item name:</strong> {{ $order->product->name }}</p>
+            <p class="text-slate-400"><strong class="text-blue-800">Placed:</strong> {{ $order->created_at->format('M d, Y · h:i A') }}</p>
+            <p class="text-slate-400"><strong class="text-gray-300">Item name:</strong> {{ $order->product->name }}</p>
         </div>
 
         {{-- Notifications --}}
         <div class="backdrop-blur-3xl shadow rounded-xl overflow-hidden">
             <table class="min-w-full divide-y divide-gray-200">
 
-                <thead class="backdrop-blur-3xl text-gray-800">
+                <thead class="backdrop-blur-3xl text-gray-400">
                     <tr>
                         <th class="px-6 py-4 text-left">Type</th>
                         <th class="px-6 py-4 text-left">Recipient</th>

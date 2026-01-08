@@ -25,7 +25,7 @@
 @guest
 {{-- Content for logged-out users --}}
 <div class="flex items-center justify-center py-24 bg-transparent">
-    <img src="{{ asset('images/loginBackground.png') }}" alt="Website Logo" class="w-100 md:w-80 rounded shadow-lg">
+    <img src="{{ asset('images/newLogin.png') }}" alt="Website Logo" class="w-100 md:w-80 rounded shadow-lg">
 </div>
 @else
 
@@ -33,7 +33,7 @@
 <div class="py-8 space-y-10">
     {{-- Welcome Card --}}
     <div
-        class="bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg rounded-xl p-6 flex flex-col sm:flex-row justify-between items-center ">
+        class="bg-gradient-to-r from-green-700 to-blue-800 text-white shadow-lg rounded-xl p-6 flex flex-col sm:flex-row justify-between items-center ">
         <div class="relative inline block font-meduim text-base">
             <h3 class="text-2xl font-bold">
                 Welcome, {{ Auth::user()->name }} <span class="absolute ml-2 mt-2.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
@@ -54,7 +54,7 @@
     {{-- Quick Actions --}}
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
         <a href="{{ route('shop.products') }}"
-            class="bg-gradient-to-l from-red-500 to-blue-600 hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col overflow-hidden text-white p-6 flex flex-col justify-center items-center text-center">
+            class="bg-gradient-to-l from-red-700 to-blue-700 hover:shadow-2xl transition transform hover:-translate-y-2 flex flex-col overflow-hidden text-white p-6 flex flex-col justify-center items-center text-center">
             <span class="text-3xl mb-2">🛍</span>
             <span class="font-semibold">View Products</span>
         </a>
@@ -77,44 +77,44 @@
         <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-slate-800 to-slate-50 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product3.jpg') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
-            <h3 class="mt-3 font-semibold text-xl text-gray-900">Headphones</h3>
+            <h3 class="mt-3 font-semibold text-xl text-gray-100">Headphones</h3>
             <p class="mt-2 font-bold text-green-700">$150</p>
         </div>
 
         <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-yellow-600 to-violet-600 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product1.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
-            <h3 class="mt-3 font-semibold text-xl text-gray-900">Laptops</h3>
+            <h3 class="mt-3 font-semibold text-xl text-gray-100">Laptops</h3>
             <p class="mt-2 font-bold text-green-700">$1,200</p>
         </div>
 
         <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-pink-600 to-sky-700 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product2.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
-            <h3 class="mt-3 font-semibold text-xl text-gray-900">Smartphones</h3>
+            <h3 class="mt-3 font-semibold text-xl text-gray-100">Smartphones</h3>
             <p class="mt-2 font-bold text-green-700">$800</p>
         </div>
 
         <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-blue-600 to-red-600 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product4.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
-            <h3 class="mt-3 font-semibold text-xl text-gray-900">Gaming PC</h3>
+            <h3 class="mt-3 font-semibold text-xl text-gray-100">Gaming PC</h3>
             <p class="mt-2 font-bold text-green-700">$2,000</p>
         </div>
     </div>
 
     {{-- Recent Orders --}}
     <div class="backdrop-blur-2xl dark:bg-gray-800 shadow rounded-lg p-6">
-        <h4 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-4">
+        <h4 class="text-xl font-semibold text-gray-100 dark:text-gray-100 mb-4">
             Recent Orders
         </h4>
 
         @forelse($recentOrders as $order)
         <div class="flex justify-between items-center border-b last:border-b-0 py-3">
-            <span class="font-semibold text-gray-900 dark:text-gray-100">
+            <span class="font-semibold text-gray-100 dark:text-gray-100">
                 {{ $order->product?->name ?? 'N/A' }}
             </span>
-            <span class="text-slate-800">
+            <span class="text-slate-400">
                 {{ $order->created_at->diffForHumans() }}
             </span>
             <span class="font-semibold text-green-800">
