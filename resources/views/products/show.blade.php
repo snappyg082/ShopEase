@@ -17,13 +17,13 @@
 
     {{-- Breadcrumb --}}
     <div class="mb-8">
-        <a href="{{ route('products.index') }}" class="text-gray-900 hover:text-indigo-100 font-semibold">
+        <a href="{{ route('products.index') }}" class="text-gray-900 hover:text-slate-200 transition font-semibold">
             ← Back to Products
         </a>
     </div>
 
     {{-- Product Detail Container --}}
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white rounded-lg shadow-lg p-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 backdrop-blur-md rounded-lg shadow-lg p-8">
 
         {{-- Product Image --}}
         <div class="flex items-center justify-center">
@@ -122,7 +122,7 @@
                 }
                 }
                 @endphp
-                <div class="bg-white rounded-lg shadow hover:shadow-xl transition p-4 flex flex-col h-full">
+                <div class="backdrop-blur-md rounded-lg shadow hover:shadow-xl transition p-4 flex flex-col h-full">
                     <img src="{{ asset($relatedImagePath) }}"
                         onerror="this.src='{{ asset('images/test.jpg') }}'"
                         alt="{{ $related->name }}"

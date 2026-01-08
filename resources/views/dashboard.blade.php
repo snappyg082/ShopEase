@@ -33,11 +33,12 @@
 <div class="py-8 space-y-10">
     {{-- Welcome Card --}}
     <div
-        class="bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg rounded-xl p-6 flex flex-col sm:flex-row justify-between items-center">
-        <div>
+        class="bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg rounded-xl p-6 flex flex-col sm:flex-row justify-between items-center ">
+        <div class="relative inline block font-meduim text-base">
             <h3 class="text-2xl font-bold">
-                Welcome, {{ Auth::user()->name }} 👋
+                Welcome, {{ Auth::user()->name }} <span class="absolute ml-2 mt-2.5 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
             </h3>
+
             <p class="mt-2 text-indigo-100">
                 Browse products, manage your cart, and track your orders.
             </p>
@@ -73,28 +74,28 @@
 
     {{-- Featured Products --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-slate-800 to-slate-50 transition">
+        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-slate-800 to-slate-50 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product3.jpg') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
             <h3 class="mt-3 font-semibold text-xl text-gray-900">Headphones</h3>
             <p class="mt-2 font-bold text-green-700">$150</p>
         </div>
 
-        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-yellow-600 to-violet-600 transition">
+        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-yellow-600 to-violet-600 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product1.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
             <h3 class="mt-3 font-semibold text-xl text-gray-900">Laptops</h3>
             <p class="mt-2 font-bold text-green-700">$1,200</p>
         </div>
 
-        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-pink-600 to-sky-700 transition">
+        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-pink-600 to-sky-700 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product2.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
             <h3 class="mt-3 font-semibold text-xl text-gray-900">Smartphones</h3>
             <p class="mt-2 font-bold text-green-700">$800</p>
         </div>
 
-        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-blue-600 to-red-600 transition">
+        <div class="backdrop-blur-xl p-6 rounded-lg shadow hover:bg-gradient-to-r from-blue-600 to-red-600 hover:scale-105 transition duration-300">
             <img src="{{ asset('images/product4.png') }}"
                 class="w-full h-48 object-cover border-4 border-black rounded">
             <h3 class="mt-3 font-semibold text-xl text-gray-900">Gaming PC</h3>
@@ -113,10 +114,10 @@
             <span class="font-semibold text-gray-900 dark:text-gray-100">
                 {{ $order->product?->name ?? 'N/A' }}
             </span>
-            <span class="text-gray-500">
+            <span class="text-slate-800">
                 {{ $order->created_at->diffForHumans() }}
             </span>
-            <span class="font-semibold text-green-600">
+            <span class="font-semibold text-green-800">
                 ${{ $order->total_price }}
             </span>
         </div>

@@ -65,6 +65,7 @@
                         {{ __('Messages') }}
                     </x-nav-link>
 
+
                     @endauth
 
                     {{-- Admin / Seller Panel --}}
@@ -227,22 +228,24 @@
         @auth
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
-            </div>
 
-            <div class="mt-3 space-y-1">
-                <x-responsive-nav-link href="{{ route('profile.edit') }}">Profile</x-responsive-nav-link>
+                <div class="relative inline block font-meduim text-base text-gray-800">
+                    {{ Auth::user()->name }}
+                    <span class="absolute ml-2 mt-2 w-2.5 h-2.5 bg-green-500 rounded-full "></span>
+                </div>
 
-                <form method="POST" action="{{ route('logout') }}">
-                    @csrf
-                    <x-responsive-nav-link href="{{ route('logout') }}"
-                        onclick="event.preventDefault(); this.closest('form').submit();">
-                        Log Out
-                    </x-responsive-nav-link>
-                </form>
+                <div class="mt-3 space-y-1">
+                    <x-responsive-nav-link href="{{ route('profile.edit') }}">Profile</x-responsive-nav-link>
+
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <x-responsive-nav-link href="{{ route('logout') }}"
+                            onclick="event.preventDefault(); this.closest('form').submit();">
+                            Log Out
+                        </x-responsive-nav-link>
+                    </form>
+                </div>
             </div>
+            @endauth
         </div>
-        @endauth
-    </div>
 </nav>
