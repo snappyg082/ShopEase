@@ -32,9 +32,9 @@
             {{-- Current Photo --}}
             <div class="mt-4 relative" x-show="!photoPreview">
                 <img
-                    src="{{ $user->image }}"
+                    src="{{ asset('userImage/' . $user->image) }}"
                     alt="{{ $user->name }}"
-                    class="w-24 h-24 rounded-full object-cover shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105"
+                    class="w-24 h-24 rounded-full object-cover shadow-lg cursor-pointer"
                     x-on:click="$refs.photo.click()" />
 
                 <div

@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
                 foreach ($users as $user) {
 
                     // Search for any file starting with user{id}. in public/img
-                    $matches = glob(public_path("img/user{$user->id}.*"));
+                    $matches = glob(public_path("image/user1.jpg{$user->id}.*"));
 
                     $image = 'default.png'; // fallback
 
