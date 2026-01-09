@@ -142,22 +142,6 @@
         @auth
         <div x-show="open" class="sm:hidden">
             <div class="pt-4 pb-3 border-t">
-
-                <div class="flex items-center gap-3 px-4">
-                    @if(Auth::user()->image || Auth::user()->profile_photo_path)
-                    <img src="{{ Auth::user()->image ? asset('userImage/' . Auth::user()->image) : Auth::user()->profile_photo_url }}"
-                        class="w-10 h-10 rounded-full">
-                    @else
-                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-600 text-white">
-                        {{ strtoupper(substr(Auth::user()->name, 0, 1)) }}
-                    </div>
-                    @endif
-                    <div>
-                        {{ Auth::user()->name }}
-                        <span class="inline-block w-2 h-2 bg-green-500 rounded-full ml-1"></span>
-                    </div>
-                </div>
-
                 <div class="mt-3 space-y-1">
                     <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">Home</x-responsive-nav-link>
                     <x-responsive-nav-link href="{{ route('shop.products') }}" :active="request()->routeIs('shop.products*')">Products</x-responsive-nav-link>

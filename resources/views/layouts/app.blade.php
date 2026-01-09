@@ -54,7 +54,7 @@
             <input type="text" name="search" placeholder="Search ..." value="{{ request('search') }}"
                 class="bg-transparent text-gray-100 border border-gray-600 px-4 py-2 rounded-lg w-full max-w-full focus:outline-none focus:ring-2 focus:ring-indigo-500">
             <button type="submit"
-                class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:scale-110 transition 0.2s">
                 Search
             </button>
         </form>

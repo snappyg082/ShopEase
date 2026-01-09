@@ -28,7 +28,7 @@
         <div class="bg-transparent shadow rounded-xl p-10 text-center">
             <p class="text-gray-300 text-lg">Your cart is empty.</p>
             <a href="{{ route('shop.products') }}"
-                class="inline-block mt-6 px-6 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">
+                class="inline-block mt-6 px-6 py-2 bg-indigo-600 text-white rounded-lg hover:scale-110 transition 0.2s">
                 🛍 Start Shopping
             </a>
         </div>
